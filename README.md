@@ -9,6 +9,11 @@ Vue.js devtools | To Help Debug (Browser Extension)
 
 ## Resources
 * [Vue Router](https://router.vuejs.org/guide/)
+* [Slots in Vue](https://vuejs.org/guide/components/slots.html)
+* [Realtime Data fetching with Vuefire](https://vuefire.vuejs.org/guide/options-api-realtime-data.html)
+* [Navigation Guards](https://router.vuejs.org/guide/advanced/navigation-guards.html#global-before-guards)
+* [router.push() | Programmatic Navigation](https://router.vuejs.org/guide/essentials/navigation.html)
+* [Ref in Vue](https://vuejs.org/guide/essentials/template-refs.html)
 ## Set Up
 * Like Angular, we have a VUE cli to support us
 ```
@@ -137,7 +142,16 @@ export default {
 }
 </script>
 ```  
-* Both the properties are reactive. Meaning, they change a
+* Both the properties are reactive. Meaning, the component is re rendered when the values change
+## Scoped Styles
+```js
+<style scoped>
+    button {
+        color: #0000
+    } 
+</style>
+```
+* Using the **scoped** keyword keeps the style scoped to the particular component 
 
 ## Register a Component 
 * After you create a component, you need to register it in the component array before using it
