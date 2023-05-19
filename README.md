@@ -1,6 +1,21 @@
 # Vue.js
 Personalized Notes for Vue.js
 
+## Table of Contents
+1. [Extensions](#extensions)
+2. [Resources](#resources)
+3. [Set up](#set-up)
+### Notes
+4. [Named Routes](#named-routes)
+5. [Passing Data to Templates](#passing-data-to-template)
+6. [Scoped Styles](#scoped-styles)
+7. [Register a component](#register-a-component)
+8. [Slots](#slot)
+8. [Conditional Rendering](#conditional-rendering)
+8. [Passing Props to children](#passing-props-to-children)
+8. [Two way input binding](#two-way-binding)
+8. [Directives](#directives)
+8. [Real-time data fetching with VueFire](#real-time-data-fetching-with-vuefire) 
 ## Extensions
 ```
 Vetur | For Vue specific syntax highlighting (VsCode)
@@ -14,12 +29,22 @@ Vue.js devtools | To Help Debug (Browser Extension)
 * [Navigation Guards](https://router.vuejs.org/guide/advanced/navigation-guards.html#global-before-guards)
 * [router.push() | Programmatic Navigation](https://router.vuejs.org/guide/essentials/navigation.html)
 * [Ref in Vue](https://vuejs.org/guide/essentials/template-refs.html)
+* [Lifecycle Hooks](https://vuejs.org/guide/essentials/lifecycle.html#lifecycle-diagram)
+* [Watchers](https://vuejs.org/guide/essentials/watchers.html)
+* [State Management](https://vuejs.org/guide/scaling-up/state-management.html)
+* [data()](https://vuejs.org/guide/scaling-up/state-management.html)
+* [nextTick()](https://vuejs.org/api/general.html#nexttick)
+### Troubleshoot
+* [404 Not Found | Firebase Hosting](https://stackoverflow.com/questions/38818265/how-do-i-serve-a-404-page-using-firebase-hosting-for-a-react-spa)
+* [Font awesome icons shown as square](https://stackoverflow.com/questions/14366158/font-awesome-not-working-icons-showing-as-squares)
 ## Set Up
 * Like Angular, we have a VUE cli to support us
 ```
 npm i @vue/cli
 ```
 * `vue ui` opens an UI in `locahost:8080` to set up the project
+
+> Note: Disable elsint if needed. Go to `vue.config.js` and add `lintOnSave: false` to `module.exports`
 
 ### Firebase Setup
 ```
@@ -72,7 +97,7 @@ npm install vue-router
 ```
 ```js
 // main.js
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import HomeComponent from './components/HomeComponent'
 
 const routes = [
@@ -81,7 +106,7 @@ const routes = [
 
 // Router Set Up
 const router = createRouter({
-    history: createWebHashHistory(),
+    history: createWebHistory(),
     routes
 })
 
